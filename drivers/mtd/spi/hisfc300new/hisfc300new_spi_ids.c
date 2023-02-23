@@ -1840,5 +1840,76 @@ struct spi_info hisfc300new_spi_info_table[] = {
 		},
 		&spi_driver_gd25qxxx,
 	},
+	 /* XMC */
+    {
+        "XM25QH64AHIG", {0x20, 0x70, 0x17}, 3, _8M,  _64K, 3,
+        {
+            &READ_STD(0, INFINITE, 66),
+            0
+        },
+        {
+            &WRITE_STD(0, 256, 104),
+            0
+        },
+        {
+            &ERASE_SECTOR_64K(0, _64K, 104),
+            0
+        },
+        &spi_driver_general,
+    },
+
+    /* XMC 3.3v */
+    {
+        "XM25QH128A", {0x20, 0x70, 0x18}, 3, _16M,  _64K, 3,
+        {
+            &READ_STD(0, INFINITE, 66),
+            0
+        },
+        {
+            &WRITE_STD(0, 256, 104),
+            0
+        },
+        {
+            &ERASE_SECTOR_64K(0, _64K, 104),
+            0
+        },
+        &spi_driver_general,
+    },
+
+        /* XMC */
+    {
+        "XM25QH64B", {0x20, 0x60, 0x17}, 3, _8M,  _64K, 3,
+        {
+            &READ_STD(0, INFINITE, 66),
+            0
+        },
+        {
+            &WRITE_STD(0, 256, 104),
+            0
+        },
+        {
+            &ERASE_SECTOR_64K(0, _64K, 104),
+            0
+        },
+        &spi_driver_general,
+    },
+
+    /* XMC 3.3v */
+    {
+        "XM25QH128B", {0x20, 0x60, 0x18}, 3, _16M,  _64K, 3,
+        {
+            &READ_STD(0, INFINITE, 50),
+            0
+        },
+        {
+            &WRITE_STD(0, 256, 104),
+            0
+        },
+        {
+            &ERASE_SECTOR_64K(0, _64K, 104),
+            0
+        },
+        &spi_driver_general,
+    },
 	{0, {0}, 0, 0, 0, 0, {0}, {0}, {0}, NULL},
 };
